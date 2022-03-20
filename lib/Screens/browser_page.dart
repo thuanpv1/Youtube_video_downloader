@@ -18,7 +18,7 @@ class _BrowserPageState extends State<BrowserPage> {
   bool _showDownloadButton = false;
 
   void checkUrl() async {
-    if (await _controller!.currentUrl() == "https://m.youtube.com/") {
+    if (_controller != null && await _controller!.currentUrl() == "https://m.youtube.com/") {
       setState(() {
         _showDownloadButton = false;
       });
